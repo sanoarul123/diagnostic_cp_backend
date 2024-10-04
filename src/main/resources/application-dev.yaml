@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: diagnostic_cp_backend
+  datasource:
+    url: jdbc:postgresql://89.117.56.214:5432/diagnostic?currentSchema=public
+    username: postgres
+    password: Code#Prophet$2024
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+    clean-on-validation-error: true
+    clean-disabled: false
+
+server:
+  port: 6500
+
+

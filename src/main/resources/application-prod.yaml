@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ems-backend
+  datasource:
+    url: jdbc:postgresql://${DB_HOSTNAME:localhost}:5432/diagnostic?currentSchema=public
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:Code#Prophet$2024}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+    clean-on-validation-error: true
+    clean-disabled: false
+
+server:
+  port: 6500
+
+
